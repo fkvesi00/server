@@ -27,5 +27,8 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "homepage": "https://github.com/fkvesi00/server.git"
+  "homepage": "https://github.com/fkvesi00/server.git",
+  "engines": {
+    "node": "12.16.3"
+    }
 }
