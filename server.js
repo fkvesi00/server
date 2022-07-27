@@ -28,7 +28,7 @@ app.use(cors());
 
 
 app.get('/',(req,res)=>{
-    res.send(database.users);
+    res.send("it's working!");
 })
 
 //ulogiramo se preko post requesta(koristimo post da bi zasititli lozinku)
@@ -45,8 +45,8 @@ app.put('/image',(req,res)=>{image.handleImage(req,res,db)})
 
 app.post('/imageurl',(req,res)=>{image.handleApiCall(req,res)})
 
-app.listen(3001,()=>{
-    console.log('app is running on port 3000')
+app.listen(process.env.PORT || 3000,()=>{
+    console.log(`app is running on port ${process.env.PORT}`)
 })
 
 /* API
