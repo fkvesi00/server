@@ -17,14 +17,11 @@ const db = knex({
     client: 'pg',
     connection: {
       connectionString: process.env.DATABASE_URL,
+      host : 'postgresql-shaped-05949',
       ssl: {
         rejectUnauthorized: false,
       },        
-      host : 'postgresql-shaped-05949',
-      port : 5432,
-      user : 'postgres',
-      password : 'mojalozinka23',
-      database : 'smart-brain'
+      
     }
   });
 
