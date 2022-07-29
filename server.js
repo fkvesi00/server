@@ -17,7 +17,6 @@ const db = knex({
     client: 'pg',
     connection: {
       connectionString: process.env.DATABASE_URL,
-      host : 'postgresql-shaped-05949',
       ssl: {
         rejectUnauthorized: false,
       },        
