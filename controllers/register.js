@@ -25,6 +25,7 @@ const handleRegister = (req, res, db, bcrypt) => {
             })
             .then(user => {
               res.json(user[0]);
+              res.json('made it');
             })
         })
         .then(trx.commit)
