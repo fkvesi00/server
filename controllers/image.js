@@ -5,7 +5,6 @@ const app=new Clarifai.App({
     apiKey:'26c374060442478e841a18c0302f035a'
   });
 
-
 const handleApiCall=(req,res)=>{
     app.models.predict(Clarifai.FACE_DETECT_MODEL,req.body.input)
     .then(data=>{
@@ -27,5 +26,5 @@ const handleImage=(req,res,db)=>{
 
 module.exports={
     handleImage:handleImage,
-    handleApiCall
+    handleApiCall:handleApiCall
 }
