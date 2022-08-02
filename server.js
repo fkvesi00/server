@@ -29,6 +29,7 @@ const db = knex({
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.urlencoded());
 
 
 app.get('/',(req,res)=>{
@@ -47,9 +48,10 @@ app.get('/profile/:id',(req,res)=>{profile.handleProfile(req,res,db)})
 //povecanje countera po broju provjerenih slika
 app.put('/image',(req,res)=>{image.handleImage(req,res,db)})
 
-app.post('/imageurl',(req,res)=>{image.handleApiCall(req,res)})
+//app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)})
+app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)})
 
-app.listen(process.env.PORT || 3000,()=>{
+app.listen(process.env.PORT || 3001,()=>{
     console.log(`app is running on port ${process.env.PORT}`)
 })
 
